@@ -1,0 +1,299 @@
+/*Global Rules*/
+body{
+    font-family: 'Segoe UI light';
+    background-color: #0D0D0D;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+/*bar scroll*/
+/* Style for the entire scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the vertical scrollbar */
+    height: 10px; /* Height of the horizontal scrollbar */
+}
+
+/* Style for the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+/*scroll function*/
+#scrollToTopBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 10px; 
+    right: 15px; 
+    z-index: 999; 
+    border: none; 
+    outline: none; 
+    background-color: #000000; 
+    color: white; 
+    cursor: pointer; 
+    padding: 10px 15px; 
+    border-radius: 50%; 
+}
+/*navbar*/
+.navbar , .always_open , .open_bar{
+    z-index: 999;
+}
+.always_open .image img{
+    width: 30px;
+    height: 50px;
+} 
+.always_open .links i{
+    font-size: 25px;
+}
+.always_open i:hover{
+    cursor: pointer;
+}
+.open_bar{
+    background-color: #000000;
+}
+.open_bar .links a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: .9s;
+}
+.open_bar .links a:hover{
+    cursor: pointer;
+    color: #ff655c;
+}
+.open_bar .copyright i:hover{
+    cursor: pointer;
+}
+.open_bar .copyright i{
+    font-size: 14px;
+    padding-bottom: 20px;
+    font-weight: 900;
+}
+.open_bar .copyright p{color: #999999;}
+.open_bar .copyright p a{
+    text-decoration: none;
+    color: #b02a37;
+    font-weight: 700;
+}
+/*search bar*/
+.input-container input{
+    width: 40%;
+    background-color: #0D0D0D;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 25px;
+    border: 1px solid white;
+    color: white;
+}
+.input-container{
+    position: relative;
+}
+.input-container i{
+    color: #395F9F;
+    padding: 10px 30px;
+    position: absolute;
+    left: 66.5%;
+}
+@media (max-width:991px) {
+    .input-container input{
+        width: 60%;
+        background-color: #0D0D0D;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 25px;
+        border: 1px solid white;
+        color: white;
+    }
+    .input-container i{
+        color: #395F9F;
+        padding: 10px 30px;
+        position: absolute;
+        left: 74.5%;
+    }
+}
+@media (max-width:767px) {
+    .input-container input{
+        width: 60%;
+        background-color: #0D0D0D;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 25px;
+        border: 1px solid white;
+        color: white;
+    }
+    .input-container i{
+        color: #395F9F;
+        padding: 10px 30px;
+        position: absolute;
+        left: 69.5%;
+    }
+}
+
+/*content*/
+.content .card1 img{
+    height: 500px;
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;;
+    overflow: hidden;
+    object-position: center;
+
+}
+.content .card1{
+    overflow: hidden;
+}
+.content .row .card1 .caption{
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    border-radius: 10px;
+    height: 500px;
+    background-color: rgb(0 0 0/ 60%);
+    color: black;
+    transition: 1s;
+    overflow: hidden;
+    opacity: 0;
+}
+.content .row .card1:hover .caption{
+    opacity: 1;
+}
+.content .row .card1:hover img{
+    transform: scale(1.2) rotate(10deg);
+    filter: blur(3px);
+    border-radius: 10px;
+}
+.content .row .caption h2{
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+}
+.content .row .caption p{
+    color: #ededed;
+    -webkit-line-clamp: 7; /*lines to display*/
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.content .row .caption h3{
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 50%;
+    border: 2px solid green;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 5px;
+
+        width: 55px; /* Set width to the width of 3 characters */
+        overflow: hidden; /* Hide text that overflows */
+        white-space: nowrap; /* Prevent text from wrapping to the next line */
+        text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+.content .row .caption .rate i{
+    color: #FFC107;
+    padding-top:20px;
+}
+
+/*contact-us*/
+.contact-us h1{
+    font-size: 32px;
+    font-weight: 500;
+}
+.text-input {
+    color: white; /* White text color */
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove default border */
+    border-bottom: 1px solid #bbb; /* Bottom border for the input field */
+    padding: 10px;
+}
+
+.text-input::placeholder {
+    color: #bbb; /* Lighter color for placeholder text */
+    position: relative; /* Position relative for the underline effect */
+    text-align: center;
+    filter: blur(0.5px);
+}
+
+.text-input::placeholder:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 1px solid #bbb; /* Underline for the placeholder */
+}
+.text-input:focus {
+    border-color: #bbb; /* Change bottom border color on focus */
+    outline: none; /* Remove default focus outline */
+}
+.text-input.errorName {
+    border-bottom:1px solid red; /* Error border color */
+    color: red; /* Error text color */
+}
+.text-input.error-password {
+    border-bottom:1px solid red; /* Error border color */
+    color: red; /* Error text color */
+}
+.text-input.error-email {
+    border-bottom:1px solid red; /* Error border color */
+    color: red; /* Error text color */
+}
+.text-input.error-age {
+    border-bottom:1px solid red; /* Error border color */
+    color: red; /* Error text color */
+}
+.text-input.error-rep {
+    border-bottom:1px solid red; /* Error border color */
+    color: red; /* Error text color */
+}
+.input i:hover{
+    cursor: pointer;
+}
+.contact-us .button{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.contact-us .button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Chrome, Safari, and Opera */
+    margin: 0; /* Remove margin to prevent extra space */
+}
+
+.error {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #DC3545; /* Button background color */
+    color: white; /* Button text color */
+    border: 1px solid #DC3545;
+    border-radius: 5px;
+    outline: none; /* Remove default outline */
+    position: relative; /* Position relative for animation */
+    transition: transform 0.3s ease; /* Smooth transition */
+    cursor: default;
+}
+.error:hover {
+    transform: translateX(250px); /* Move left by 20 pixels */
+    cursor: default;
+}
